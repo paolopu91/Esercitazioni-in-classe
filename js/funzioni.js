@@ -1,0 +1,3 @@
+/* 
+In questo file andremo a vedere cosa sono le funzioni e come funzionano
+*/
