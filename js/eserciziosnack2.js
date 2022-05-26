@@ -32,14 +32,3 @@ while(nuovoArray.length < 10){
 arrayGenerati.push(nuovoArray);
 
 }
-
-
-console.log("esrfcizio di oggi")
-
-// palindroma.js
-
-const parola = "osso";
-
-"osso".split(""); // questa funzione ci divide la stringa all'interno del nostro array in lettere
-
-
