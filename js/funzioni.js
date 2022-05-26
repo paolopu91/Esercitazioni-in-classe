@@ -98,3 +98,75 @@ console.log ('footer generato')
 }
 
 generaTabella()
+
+
+console.log("----------------------")
+
+// le funzioni sono soggette ad hoisting!
+function stampaMessaggioBenvenuto (){
+    console.log("Benvenuto Utente");
+}
+// non si possono avere due funzioni uguali
+
+// invochiamo così la nostra funzione
+// se non lo facciamo non uscirà nulla nel nostro console.log
+stampaMessaggioBenvenuto();
+
+//_______________________________________________________
+//Funzioni con argomenti
+//__________________________________________________________
+
+
+function sommaNumeri(num1, num2){
+console.log(num1 + num2);
+}
+//        (num1 , num2)
+sommaNumeri(45, 12);
+sommaNumeri(32 ,78);
+sommaNumeri(10, 1);
+
+//____________________________________
+//funzione con return
+//____________________________________
+
+------------------------------------------------------
+// questo è il metodo 1
+// const listaNumeri = [];
+
+// function generaNumeroRandom(){
+//   const nuovoNumero = Math.floor(math.random() * 10);
+//   listaNumeri.push(nuovoNumero)
+// }
+// generaNumeroRandom()
+
+----------------------------------------------------
+
+----------------------------------------------------
+// metodo numero 2
+const listaNumeri = [];
+
+function generaNumeroRandom(){
+  const nuovoNumero = Math.floor(math.random() * 10);
+return nuovoNumero;
+}
+// così non leggo il valore che restituisce la funzione
+//lo sto solo invocando
+generaNumeroRandom()
+
+// leggo e salvo in una variabile il valore della mia funzione
+const numeroGenerato = generaNumeroRandom();
+
+//in questo modo sto leggendo la funzione a schermo.
+console.log(generaNumeroRandom())
+
+//posso pushare direttamente dentro l'array il valore della mia funzione
+listaNumeri.push(generaNumeroRandom());
+
+// generare numeri random con i cicli e la funzione
+for (let i= 0; i< 100 ; i++){
+    listaNumeri.push(generaNumeroRandom);
+}
+
+console.log(listaNumeri);
+
+----------------------------------------------------
