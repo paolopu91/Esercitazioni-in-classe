@@ -54,13 +54,51 @@ console.log ("------------quarto esercizio------------")
 //Generare un numero random tra un numero minimo e un numero massimo
 
 function generateRandomNumbers(min, max){
+
+    // fare un controllo per la nostra funzione
+    if(min === undefined || min === null || min < 0){
+        return;
+        // min = 0
+    }
+    if(max === undefined || max < (min +1)){
+        return;
+        // max = min +1
+    }
+
     // questa qui è la nosta variabile per avere un min e un max
     const result = Math.floor(Math.random() * (max-min+1))+min;
     return result;
 }
+
 console.log(generateRandomNumbers(1,10));
 console.log(generateRandomNumbers(1,10));
 console.log(generateRandomNumbers(1,10));
 console.log(generateRandomNumbers(50,90));
 console.log(generateRandomNumbers(50,90));
 console.log(generateRandomNumbers(50,90));
+
+for (let i = 0; i< 10; i++) {
+    console.log(i, generateRandomNumbers(i*10, i*20))
+}
+
+console.log("---------------------quinto esercizio------------")
+
+const listaNascita = ["pannolini","body","mangia pannolini", "borotalco"];
+
+
+function stampaArrayInUl(listaDaStampare, idElementoHTML) {
+    const elementoHTML = document.getElementById(idElementoHTML);
+
+    if(idElementoHTML === null ){
+        return;
+    }
+
+    for (let i = 0; listaDaStampare.length; i++){
+        const element = listaDaStampare[i];
+        
+        // elementoHTML.innerHTML += "<li>"+ element +"</li>"
+        // oppure
+        elementoHTML.innerHTML += `<li>${element}</li>`
+    }
+}
+stampaArrayInUl(listaNascita, "lista");
