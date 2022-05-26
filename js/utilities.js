@@ -95,10 +95,19 @@ function stampaArrayInUl(listaDaStampare, idElementoHTML) {
 
     for (let i = 0; listaDaStampare.length; i++){
         const element = listaDaStampare[i];
-        
+
         // elementoHTML.innerHTML += "<li>"+ element +"</li>"
         // oppure
         elementoHTML.innerHTML += `<li>${element}</li>`
     }
 }
 stampaArrayInUl(listaNascita, "lista");
+
+console.log("esrfcizio di oggi")
+
+// palindroma.js
+
+const parola = "osso";
+
+"osso".split(""); // questa funzione ci divide la stringa all'interno del nostro array in lettere
+
