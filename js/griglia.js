@@ -21,23 +21,14 @@ function createGrid (xCells , yCells){
 
     // creo il mio ciclo per far si che si vedano le mie celle
     for (let i = 0 ; i<cellsNumber; i++){
-        // creo una variabile per i miei numeri casuali
-        
 
-        //creare un div che rappresenta una singola cella
-        //Non usiamo inner.html ma il createElement
+        // Creo un div usando createElement e non innerHTML
         const celle = document.createElement("div");
         //aggiungo le classi alle mie celle che ho inserito in css
-        //Meglio aggiungerlo prima del nostro append perchè renderà il browser meno pesante
         celle.classList.add("celle");
-        
-        
         //append aggiunge un elemento virtuale ad un elemento che abbiamo creato
         gridContainer.append(celle);
-
     }
-
-
 }
-
+//richiamo esternamente alla mia funzione per mostrare le celle in HTML
 createGrid(10, 10);
