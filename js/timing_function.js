@@ -55,3 +55,28 @@ console.log("variabile timerSecondi =", timerSecondi);
 setTimeout(function(){
     clearInterval(timerSecondi);
 }, 5000);
+
+
+// come leggere l'ora attuale??
+console.log(new Date().toString())
+
+// come leggere l'orario per avere i dati che vogliamo noi
+
+// prendiamo il nostro id dal nostro html
+const currentTime = document.getElementById('currentTime')
+
+// creare una variabile per la nostra data
+const nowDate = new Date();
+
+
+setInterval (function() { 
+    const time= nowDate.getHours() +
+     ':' + 
+    nowDate.getMinutes() +
+      ':' + 
+    nowDate.getSeconds()
+    currentTimeContainer.innerHTML = time;
+},250);
+
+// per far si che sia giusto lo scorrere del tempo, dobbiamo
+// settare i millesecondi piu' bassi possibile, rimanere sempre sopra i 100 millesecondi
