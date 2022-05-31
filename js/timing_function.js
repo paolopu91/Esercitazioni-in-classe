@@ -1,6 +1,8 @@
 /*
 //TIMING FUNCTION COSA SONO E COME SI SCRIVONO
 
+NON ABBIAMO UN TEMPO STANDARD IN CUI VA ESEGUITA QUESTA FUNZIONE, POSSIMAO METTERE I MILLESECONDI CHE VOGLIAMO!
+
 NON HANNO UNA POSIZIONE SU DOVE DEVONO ESSERE SCRITTE NEL JS
 
 //COME SI SCRIVE:
@@ -30,12 +32,26 @@ che avrà luogo in futuro.
 
 
 
-
-
-
-
-
-
-
-
+ESERCIZI DI PRATICA QUI SOTTO
 */
+
+//Timer che indica tra quanto arriva la pausa
+let secondiRimanenti = 50;
+
+//per vedere un timer che va al contrario, usiamo un setInterval
+//Questa funzione deve avere 2 argomenti, funzione ad intervalli di tempo, tempo da aspettare prima che la funzione si avveri
+const timerSecondi = setInterval(function(){
+console.log(secondiRimanenti);
+
+secondiRimanenti--;
+}, 1000)
+
+console.log("variabile timerSecondi =", timerSecondi);
+
+// per bloccare il timer usaimo il clearInterval
+//quando bloccarlo? Non subito ma dopo 5 secondi
+
+//richiamiamo la funzione setTimeout per dichiarare il nostro clearInterval e bloccare il codice dopo 5 secondi.
+setTimeout(function(){
+    clearInterval(timerSecondi);
+}, 5000);
