@@ -140,6 +140,9 @@ const classi = [
     }
 ];
 
+
+
+
 classi[0].studenti[0].indirizzo.via
 console.table(classi);
 
